@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# View Wikipedia user page
+
+# bind zu spawn --userscript com2wiki.user
+# put in /usr/share/qutebrowser/userscripts
+
+username=${QUTE_URL:40}
+namespace="http://en.wikipedia.org/wiki/user"
+
+#echo $substring >> $QUTE_FIFO
+echo "open $namespace:$username" >> "$QUTE_FIFO"

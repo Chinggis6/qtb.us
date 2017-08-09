@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Switch to Commons user page
+
+# bind zU spawn -u wiki2com.user
+# put in /usr/share/qutebrowser/userscripts
+# make the script file executable with: chmod +x
+
+username=${QUTE_URL:35}
+namespace="http://commons.wikimedia.org/wiki/user"
+
+#echo $substring >> $QUTE_FIFO
+echo "open $namespace:$username" >> "$QUTE_FIFO"
